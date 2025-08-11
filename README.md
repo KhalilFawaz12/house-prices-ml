@@ -2,7 +2,7 @@
 
 **One-line goal:** End-to-end ML pipeline for predicting house prices (Ames dataset).
 
-**Dataset:** Kaggle - House Prices Dataset (link: https://www.kaggle.com/datasets/yasserh/housing-prices-dataset)
+**Dataset:** Kaggle - House Prices - Advanced Regression Techniques (link: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 
 **Metric:** RMSE
 
@@ -18,6 +18,10 @@
 1. Create venv and install requirements
 2. `jupyter lab`
 3. `streamlit run app.py`
+
+## License
+
+- The dataset is licensed under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
 
 ## Author
 - Khalil Fawaz — link to LinkedIn: www.linkedin.com/in/khalil-fawaz-aa7709314
