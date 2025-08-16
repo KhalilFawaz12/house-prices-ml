@@ -1,0 +1,11 @@
+{
+  "saved_at": "2025-08-16T21:08:27.608572Z",
+  "model_variable": "model",
+  "model_file": "final_model.pkl",
+  "notebook": "notebooks/final_analysis.ipynb",
+  "notes": "Final model trained in notebook. Replace fields below with actual values if desired.",
+  "algorithm": "Ridge",
+  "random_state": null,
+  "training_rows": 1077,
+  "training_features": 300
+}
