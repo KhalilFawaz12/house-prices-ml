@@ -1,5 +1,5 @@
 {
-  "saved_at": "2025-08-16T21:08:27.608572Z",
+  "saved_at": "2025-08-16T21:27:03.696169Z",
   "model_variable": "model",
   "model_file": "final_model.pkl",
   "notebook": "notebooks/final_analysis.ipynb",
@@ -7,5 +7,6 @@
   "algorithm": "Ridge",
   "random_state": null,
   "training_rows": 1077,
-  "training_features": 300
+  "training_features": 300,
+  "model_predicts_log1p": true
 }
