@@ -27,6 +27,9 @@
 - The saved model (`results/final_model.pkl`) therefore predicts `log1p(SalePrice)`. Inference code and the demo app invert predictions using `np.expm1` and return raw sale prices.
 - To reproduce the model: run `notebooks/final_analysis.ipynb` end-to-end (it produces results/final_model.pkl and results/final_model_metadata.json).
 
+## Live Demo
+
+- URL: https://zwdhmjg6838aw5utr3tueh.streamlit.app/
 
 ## License
 
