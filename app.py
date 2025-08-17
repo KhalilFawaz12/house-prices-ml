@@ -38,9 +38,8 @@ else:
                 sample = pd.read_csv(train_path).drop(columns=["SalePrice"], errors="ignore").iloc[[0]]
                 st.write("Sample input (one row):")
                 st.dataframe(sample)
-                if st.button("Predict sample"):
-                    preds = predict_raw_df(sample, model)
-                    st.write("Prediction:", preds[0])
+                preds = predict_raw_df(sample, model)
+                st.write("Prediction:", preds[0])
             else:
                 st.error("data/train.csv not found. Place train.csv in data/ or upload a CSV above.")
 
