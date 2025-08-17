@@ -9,10 +9,13 @@
 **Success criteria:** Achieve >=15% improvement over baseline linear regression RMSE.
 
 ## Repo structure
-- notebooks/: EDA and experiments
+- notebooks/: Preprocessing the data and training the model
 - src/: reusable modules (data.py, features.py, train.py, predict.py)
 - app.py: Streamlit demo
-- results/: final models and artifacts
+- results/: final model and artifacts
+
+## Model
+-The trained model is saved as results/final_model.pkl. It is not uploaded to GitHub because of size and reproducibility reasons. You can regenerate it by running the notebook end-to-end.
 
 ## How to run locally
 1. Create venv and install requirements
