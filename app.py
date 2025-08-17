@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 import pandas as pd
 import os
 from src.predict import load_model, predict_raw_df, MODEL_PATH
@@ -35,7 +36,8 @@ else:
         if st.button("Load sample row from train.csv"):
             train_path = os.path.join("data", "train.csv")
             if os.path.exists(train_path):
-                sample = pd.read_csv(train_path).drop(columns=["SalePrice"], errors="ignore").iloc[[0]]
+                rand=random.randint(0,500)
+                sample = pd.read_csv(train_path).drop(columns=["SalePrice"], errors="ignore").iloc[[rand]]
                 st.write("Sample input (one row):")
                 st.dataframe(sample)
                 preds = predict_raw_df(sample, model)
