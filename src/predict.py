@@ -1,23 +1,3 @@
-'''import os, joblib
-import pandas as pd
-import numpy as np
-from src.preprocess import encode_test_like_train
-
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
-MODEL_PATH = os.path.join(RESULTS_DIR, "final_model.pkl")
-
-def load_model(path=None):
-    path = path or MODEL_PATH
-    return joblib.load(path)
-
-def predict_raw_df(df: pd.DataFrame, model):
-    X_test = encode_test_like_train(df)
-    preds = model.predict(X_test)
-    preds = np.expm1(preds)
-    return preds'''
-
-# src/predict.py  --- replace predict_raw_df with this implementation
 import os
 import joblib
 import numpy as np
@@ -34,16 +14,15 @@ def load_model(path=None):
     return joblib.load(path)
 
 def _normalize_name(s: str) -> str:
-    """Normalize a feature name for fuzzy matching: lower + remove non-alphanum."""
+   #Normalize a feature name for fuzzy matching: lower + remove non-alphanum
     if s is None:
         return ""
     return re.sub(r'[^0-9a-z]', '', str(s).lower())
 
 def _get_model_feature_names(model):
-    """Return the feature names expected by the model; fallback to train_columns.txt file."""
+    #Return the feature names expected by the model
     if hasattr(model, "feature_names_in_"):
         return list(model.feature_names_in_)
-    # fallback: try to read results/train_columns.txt
     if os.path.exists(TRAIN_COLS_PATH):
         with open(TRAIN_COLS_PATH, "r", encoding="utf-8") as f:
             return [line.strip() for line in f.readlines()]

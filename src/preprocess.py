@@ -42,7 +42,6 @@ def apply_notebook_fillna(df: pd.DataFrame) -> pd.DataFrame:
             df["MiscFeature"] = df["MiscFeature"].fillna("No Miscellaneous feature")
         else:
             df[i]=df[i].fillna(df[i].mode()[0])
-        # other fillna performed in your notebook can be added here following the same pattern
     return df
 
 
