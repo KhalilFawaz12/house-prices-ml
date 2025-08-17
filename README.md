@@ -22,6 +22,12 @@
 2. `jupyter lab`
 3. `streamlit run app.py`
 
+## Notes about preprocessing & output
+- The notebook preprocesses numeric features with `np.log1p` and also transforms the **target** `SalePrice` with `np.log1p` before training.
+- The saved model (`results/final_model.pkl`) therefore predicts `log1p(SalePrice)`. Inference code and the demo app invert predictions using `np.expm1` and return raw sale prices.
+- To reproduce the model: run `notebooks/final_analysis.ipynb` end-to-end (it produces results/final_model.pkl and results/final_model_metadata.json).
+
+
 ## License
 
 - The dataset is licensed under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
